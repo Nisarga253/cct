@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 def simulate_stfq():
     # Step 1: Generate random jobs
-    users = ["Alice", "Bob", "Charlie"]
+    users = ["Job1", "Job2", "Job3"]
     num_jobs = 15
     jobs = [
         (random.randint(0, 10), random.randint(1, 5), random.choice(users))
