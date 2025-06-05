@@ -38,11 +38,11 @@ def simulate_stfq():
         virtual_time = finish_time
         schedule.append((start_time, finish_time, user, length))
 
-    colors = {"Alice": "red", "Bob": "green", "Charlie": "blue"}
+    colors = {"Job1": "red", "Job2": "green", "Job3": "blue"}
     fig, ax = plt.subplots(figsize=(10, 4))
     for i, (start, end, user, length) in enumerate(schedule):
         ax.barh(user, end - start, left=start, color=colors[user], edgecolor='black')
-        ax.text(start + length / 2 - 0.3, ["Alice", "Bob", "Charlie"].index(user),
+        ax.text(start + length / 2 - 0.3, ["Job1", "Job2", "Job3"].index(user),
                 f"J{i}", va='center', ha='center', color='white')
     ax.set_xlabel("Time")
     ax.set_title("Start-Time Fair Queuing Simulation")
